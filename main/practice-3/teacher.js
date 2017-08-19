@@ -4,7 +4,13 @@ module.exports = class Teacher extends Person{
     constructor(name,age,clazzes){
         super(name,age);
         this.clazzes = clazzes;
+        this.notifyObject(clazzes);
+    }
 
+    notifyStudentAppended(){};
+    notifyLeaderAssigned(){};
+    notifyObject(clazzes) {
+        clazzes.forEach(clazz => clazz.teacher = this);
     }
 
     isTeaching(student){
@@ -27,5 +33,4 @@ module.exports = class Teacher extends Person{
             return arr;
         }, []).join(",");
     }
-
 }

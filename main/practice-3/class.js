@@ -4,12 +4,13 @@ module.exports = class Class {
         this.number = number;
         this.leader;
         this.member = [];
-
     }
 
     assignLeader(student){
         if(this.hasStudent(student)){
-
+            if (this.teacher) {
+                this.teacher.notifyLeaderAssigned(`${student.name} become Leader of Class ${student.clazz.number}`);
+            }
             this.leader = student.id;
             return "Assign team leader successfully."
         }else{
@@ -18,7 +19,9 @@ module.exports = class Class {
     }
 
     appendMember(student){
-
+        if (this.teacher) {
+            this.teacher.notifyStudentAppended(`${student.name} has joined Class ${student.clazz.number}`);
+        }
         this.member.push(student.id);
     }
 
