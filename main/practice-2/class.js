@@ -8,4 +8,4 @@ module.exports = class Class {
     assignLeader(student){
         this.leader = student.id;
     }
-};
+}

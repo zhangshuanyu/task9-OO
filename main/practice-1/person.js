@@ -4,12 +4,11 @@ module.exports = class Person {
         this.name = name;
         this.age = age;
     }
-
     introduce(){
-        return this.basicIntroduce();
+        return this.localIntroduce();
     }
 
-    basicIntroduce(){
+    localIntroduce(){
         return `My name is ${this.name}. I am ${this.age} years old.`;
     }
 }

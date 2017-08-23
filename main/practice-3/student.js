@@ -15,5 +15,4 @@ module.exports = class Student extends Person{
             return super.introduce() + ` I am a Student. I am at Class ${this.clazz.number}.`;
         }
     }
-
 }

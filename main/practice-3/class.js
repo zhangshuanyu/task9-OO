@@ -28,4 +28,4 @@ module.exports = class Class {
     hasStudent(student){
         return this.member.includes(student.id);
     }
-};
+}

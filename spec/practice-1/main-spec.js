@@ -11,9 +11,7 @@ describe("Person", () => {
 
   it("should have a method introduce, introduce person with name and age", () => {
     let person = new Person("Tom", 21);
-
     let introduce = person.introduce();
-
     expect(introduce).toBe("My name is Tom. I am 21 years old.");
 
   });

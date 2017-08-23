@@ -7,6 +7,7 @@ module.exports = class Student extends Person{
     }
 
     introduce(){
-        return this.basicIntroduce() + ` I am a Student. I am at Class ${this.clazz}.`;
+        return this.localIntroduce() + ` I am a Student. I am at Class ${this.clazz}.`;
     }
+
 }
